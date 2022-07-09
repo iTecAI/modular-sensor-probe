@@ -10,7 +10,7 @@ class Sensor:
         return self.sensor.temperature, self.sensor.relative_humidity
 
 if __name__ == "__main__":
-    with open("./sensor_config.py", "r") as f:
+    with open("./sensor_config.json", "r") as f:
         conf = json.load(f)
     
     sensors = {name: Sensor(
